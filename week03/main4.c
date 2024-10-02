@@ -10,6 +10,9 @@ int main(void) {
 	printf("enter two intergers:");
 	scanf("%f %f", &num1, &num2);
 	
+	if (num2 ==0);
+	printf("error: can't divide in zero.\n");
+	else;
 	printf("%f/%f=%f\n",num1,num2,num1/num2);
 	
 	return 0;
