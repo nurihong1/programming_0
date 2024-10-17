@@ -6,8 +6,7 @@
 int main(int argc, char *argv[]) {
 	
 	int answer=17;
-	int trial=1;
-	int a;
+	int trial=1,a;
 	
 	do
 	{
@@ -27,7 +26,7 @@ int main(int argc, char *argv[]) {
 			
 	trial++;
 
-	} while (a=answer);
+	} while (a !=answer);
 	
 	printf("Congratulation! Trial: %i", trial);
 	
