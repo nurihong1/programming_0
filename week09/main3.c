@@ -21,4 +21,3 @@ void f(void)
 	printf("#");
 }
 
-/* f함수에서 나왔을 때 i=9 */ 
