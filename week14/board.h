@@ -11,7 +11,7 @@
 #include <stdlib.h>
 
 // ----- EX. 3 : board ------------
-#define N_BOARD                 20
+#define N_BOARD                  20
 
 //0 - OK, 1 - destroyed
 #define BOARDSTATUS_NOK          1
