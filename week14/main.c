@@ -192,11 +192,7 @@ int main(int argc, const char * argv[]) {
         int dum;
 
 // ----- EX. 4 : player ------------
-        if (player_status[turn] != PLAYERSTATUS_LIVE)
-        {
-            turn = (turn + 1)%N_PLAYER;
-            continue;
-        }
+        
 // ----- EX. 4 : player ------------
     int board_status[N_BOARD];    
         //step 2-1. status printing
@@ -245,22 +241,26 @@ void board_printBoardStatus(void)
         printf("coin result is %i\n", coinResult);
         //step 2-4. coin
         
+        if (player_status[turn] == PLAYERSTATUS_LIVE)
+        {
+            turn = (turn + 1)%N_PLAYER;
+            continue;
+        }
     
+        if (turn==0)
+        {
+        	int shark_pos = board_stepShark();
+        	printf("Shark moved to %i\n", shark_pos);
+        	//check die
+        	checkDie();
+		}
+
         if (player_position[turn] != N_BOARD-1){
         	player_status[turn]=PLAYERSTATUS_LIVE;
 		}
 		else
         player_status[turn]=PLAYERSTATUS_END; 
         
-        if (turn==0)
-        {
-        	int shark_pos = board_stepShark();
-        	printf("Shark moved to %i\n", shark_pos);
-        	//check die
-        	checkDie();//??????????????????????????????????????????????????????
-		}
-
-       
         
         //step 2-5. end process
         
